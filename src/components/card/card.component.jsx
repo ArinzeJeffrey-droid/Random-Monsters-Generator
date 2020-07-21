@@ -2,6 +2,8 @@ import React from 'react';
 
 export const Card = (props) => {
     return (
-        <div>{props.monster.name}</div>
+        <div>
+            <h1>{props.monster.name}</h1>
+        </div>
     )
 }
