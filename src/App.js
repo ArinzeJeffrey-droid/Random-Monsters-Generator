@@ -6,7 +6,8 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            monsters:[]
+            monsters:[],
+            searchField: ""
         }
     }
     componentDidMount() {
@@ -17,6 +18,11 @@ class App extends React.Component {
     render() {
         return (
         <div className="App">
+        <input 
+            type="search" 
+            placeholder="Search Monster"
+            onChange={e => {this.setState({searchField: e.target.value})}} 
+        />
         <CardList monsters={this.state.monsters}/>
         </div>
     );
